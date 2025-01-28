@@ -2,9 +2,9 @@ import React from 'react';
 
 /**
  * Pagination component to control the page view
- * @param {number} currentPage The current active page
- * @param {function} handlePageChange Function to set the current page
- * @param {number} totalPages Total number of pages
+ * @param {number} currentPage 
+ * @param {function} handlePageChange 
+ * @param {number} totalPages 
  */
 const Pagination = ({ currentPage, handlePageChange, totalPages }) => {
 

@@ -3,10 +3,8 @@ import "./UserList.css";
 
 const UserList = ({ users, onEdit, onDelete }) => {
   const handleDelete = (userId) => {
-    // Optimized delete functionality
-    const updatedUsers = users.filter(user => user.id !== userId);
-    // Optionally, re-index the users after deletion if needed (skip this for optimization)
-    onDelete(updatedUsers); // Use callback from parent to update the state
+    // Call deleteUser directly from App.js
+    onDelete(userId); // Pass only the userId, no need for re-indexing here
   };
 
   return (
