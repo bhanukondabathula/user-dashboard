@@ -4,6 +4,7 @@ import "./App.css";
 import UserList from "./components/UserList";
 import UserForm from "./components/UserForm";
 import Pagination from "./components/Pagination";
+import ErrorBoundary from './components/ErrorBoundary';
 
 const App = () => {
   const [users, setUsers] = useState([]);
@@ -90,38 +91,41 @@ const App = () => {
   const totalPages = Math.ceil(users.length / usersPerPage);
 
   return (
-    <div className="app">
-      <h1>User Management Dashboard</h1>
-      {!isAddingUser && !editingUser && (
-        <div className="add-user-container">
-          <button className="add-user-button" onClick={() => setIsAddingUser(true)}>
-            Add User
-          </button>
+    <ErrorBoundary>
+        <div className="app">
+          <h1>User Management Dashboard</h1>
+          {!isAddingUser && !editingUser && (
+            <div className="add-user-container">
+              <button className="add-user-button" onClick={() => setIsAddingUser(true)}>
+                Add User
+              </button>
+            </div>
+          )}
+          {(isAddingUser || editingUser) && (
+            <UserForm
+              addUser={addUser}
+              updateUser={updateUser}
+              editingUser={editingUser}
+              setEditingUser={setEditingUser}
+              setIsAddingUser={setIsAddingUser}
+            />
+          )}
+          <UserList
+            users={currentUsers}
+            onDelete={deleteUser}
+            onEdit={(user) => {
+              setEditingUser(user);
+              setIsAddingUser(false);
+            }}
+          />
+          <Pagination
+            currentPage={currentPage}
+            handlePageChange={handlePageChange}
+            totalPages={totalPages}
+          />
         </div>
-      )}
-      {(isAddingUser || editingUser) && (
-        <UserForm
-          addUser={addUser}
-          updateUser={updateUser}
-          editingUser={editingUser}
-          setEditingUser={setEditingUser}
-          setIsAddingUser={setIsAddingUser}
-        />
-      )}
-      <UserList
-        users={currentUsers}
-        onDelete={deleteUser}
-        onEdit={(user) => {
-          setEditingUser(user);
-          setIsAddingUser(false);
-        }}
-      />
-      <Pagination
-        currentPage={currentPage}
-        handlePageChange={handlePageChange}
-        totalPages={totalPages}
-      />
-    </div>
+    </ErrorBoundary>
+    
   );
 };
 
