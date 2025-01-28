@@ -16,12 +16,30 @@
   font-weight: 600;
 }
 
+.user-form .required {
+  color: red;
+  font-weight: bold;
+}
+
 .user-form input {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
+}
+
+.user-form input.error-input {
+  border: 2px solid red;
+  background-color: #f4e8e8;
+}
+
+.error-text {
+  color: red;
+  font-size: 0.875em;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  display: block;
 }
 
 .user-form button {
@@ -44,10 +62,10 @@
 }
 
 .user-form button[type="button"] {
-  background-color: #dc3545;
+  background-color: #eeadb3;
   color: white;
 }
 
 .user-form button[type="button"]:hover {
-  background-color: #c82333;
+  background-color: #e0aaaf;
 }
