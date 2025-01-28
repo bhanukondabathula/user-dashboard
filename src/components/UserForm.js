@@ -67,6 +67,7 @@ const UserForm = ({ addUser, updateUser, editingUser, setEditingUser, setIsAddin
       <input
         type="text"
         value={userData.firstName}
+        placeholder="First Name"
         onChange={(e) => setUserData({ ...userData, firstName: e.target.value })}
       />
       {errors.firstName && <small>{errors.firstName}</small>}
@@ -75,6 +76,7 @@ const UserForm = ({ addUser, updateUser, editingUser, setEditingUser, setIsAddin
       <input
         type="text"
         value={userData.lastName}
+        placeholder="Last Name"
         onChange={(e) => setUserData({ ...userData, lastName: e.target.value })}
       />
       {errors.lastName && <small>{errors.lastName}</small>}
@@ -83,6 +85,7 @@ const UserForm = ({ addUser, updateUser, editingUser, setEditingUser, setIsAddin
       <input
         type="email"
         value={userData.email}
+        placeholder="Email"
         onChange={(e) => setUserData({ ...userData, email: e.target.value })}
       />
       {errors.email && <small>{errors.email}</small>}
@@ -91,6 +94,7 @@ const UserForm = ({ addUser, updateUser, editingUser, setEditingUser, setIsAddin
       <input
         type="text"
         value={userData.department}
+        placeholder="Department"
         onChange={(e) => setUserData({ ...userData, department: e.target.value })}
       />
       {errors.department && <small>{errors.department}</small>}

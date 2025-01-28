@@ -2,6 +2,13 @@ import React from "react";
 import "./UserList.css";
 
 const UserList = ({ users, onEdit, onDelete }) => {
+  const handleDelete = (userId) => {
+    // Optimized delete functionality
+    const updatedUsers = users.filter(user => user.id !== userId);
+    // Optionally, re-index the users after deletion if needed (skip this for optimization)
+    onDelete(updatedUsers); // Use callback from parent to update the state
+  };
+
   return (
     <div className="user-list">
       <table>
@@ -36,7 +43,7 @@ const UserList = ({ users, onEdit, onDelete }) => {
 
                   <button
                     className="delete-button"
-                    onClick={() => onDelete(user.id)}
+                    onClick={() => handleDelete(user.id)}
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                       <path d="M5 6h14v14.5c0 1.5-1 2.5-2.5 2.5h-9C6 23 5 22 5 20.5V6zM3 4h18v2H3V4zm11.5 1a1 1 0 10-2 0h-8V4h18v1h-8z" />

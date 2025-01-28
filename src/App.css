@@ -1,4 +1,4 @@
-/* App Styles */
+
 .app {
   font-family: "Poppins", sans-serif;
   padding: 20px;
@@ -84,7 +84,7 @@ td {
 }
 
 
-/* Responsive Styles */
+
 @media (max-width: 768px) {
   h1 {
     font-size: 20px;
@@ -92,8 +92,8 @@ td {
 
   table {
     display: block;
-    overflow-x: auto; /* Horizontal scrolling for small screens */
-    white-space: nowrap; /* Prevent wrapping */
+    overflow-x: auto; 
+    white-space: nowrap; 
     margin-top: 15px;
   }
 
