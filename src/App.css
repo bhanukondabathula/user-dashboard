@@ -1,0 +1,140 @@
+/* App Styles */
+.app {
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.add-user-button {
+  background: linear-gradient(145deg, #6a11cb, #2575fc); 
+  color: white;
+  border: none;
+  margin: 20px auto;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); 
+  transform: translateY(0);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+td {
+  font-size: 13px;
+}
+
+.selected-row {
+  background-color: #f0f8ff;
+  box-shadow: inset 0 0 5px rgba(117, 204, 222, 0.2);
+}
+
+
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination-container button {
+  margin: 0 10px;
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination-container button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto; /* Horizontal scrolling for small screens */
+    white-space: nowrap; /* Prevent wrapping */
+    margin-top: 15px;
+  }
+
+  th,
+  td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .delete-button,
+  .edit-button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .pagination button {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-user-button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  th,
+  td {
+    font-size: 11px;
+    padding: 6px;
+  }
+
+  .delete-button,
+  .edit-button {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+
+  .pagination button {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+}
