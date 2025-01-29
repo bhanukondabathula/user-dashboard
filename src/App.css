@@ -1,7 +1,6 @@
 .app {
   font-family: "Poppins", sans-serif;
   padding: 30px;
-  max-width: 1200px;
   border-radius: 12px;
   background: #ffffff;
   margin: auto;
@@ -44,35 +43,6 @@ h1 {
   transform: translateY(0);
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-th,
-td {
-  padding: 10px;
-  text-align: left;
-  border: 1px solid #ddd;
-}
-
-th {
-  background-color: #f4f4f4;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-td {
-  font-size: 13px;
-}
-
-.selected-row {
-  background-color: #f0f8ff;
-  box-shadow: inset 0 0 5px rgba(117, 204, 222, 0.2);
-}
-
-
 
 .pagination-container {
   display: flex;
@@ -97,11 +67,11 @@ td {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .app {
-    max-width: 90%; 
-    margin: 20px auto; 
-    padding: 20px; 
+    width: 100%; 
+    margin: 20px 10px; 
+    padding: 10px; 
     border-radius: 10px; 
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); 
   }
@@ -109,24 +79,6 @@ td {
     font-size: 20px;
   }
 
-  table {
-    display: block;
-    overflow-x: auto; 
-    white-space: nowrap; 
-    margin-top: 15px;
-  }
-
-  th,
-  td {
-    font-size: 12px;
-    padding: 8px;
-  }
-
-  .delete-button,
-  .edit-button {
-    padding: 6px 10px;
-    font-size: 12px;
-  }
 
   .pagination button {
     padding: 8px 10px;
@@ -138,18 +90,6 @@ td {
   .add-user-button {
     font-size: 14px;
     padding: 10px 15px;
-  }
-
-  th,
-  td {
-    font-size: 11px;
-    padding: 6px;
-  }
-
-  .delete-button,
-  .edit-button {
-    padding: 5px 8px;
-    font-size: 11px;
   }
 
   .pagination button {
