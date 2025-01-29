@@ -73,44 +73,26 @@ button {
 }
 
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .user-list {
-    font-size: 8px; 
-    padding: 10px;
+    font-size: 16px; 
+    padding: 15px;
   }
 
   table {
-    font-size: 12px;
+    font-size: 16px;
     overflow-x: scroll; 
   }
 
   th, td {
-    padding: 8px;
-    font-size: 12px; 
+    padding: 10px;
+    font-size: 16px; 
   }
 
   .edit-button,
   .delete-button {
-    font-size: 10px;
-    padding: 6px 10px;
+    font-size: 16px;
+    padding: 15px 20px;
   }
 
-}
-
-@media (max-width: 576px) {
-  .user-list {
-    font-size: 7px; 
-  }
-
-  th, td {
-    padding: 8px;
-    font-size: 10px; 
-  }
-
-  .edit-button,
-  .delete-button {
-    font-size: 10px;
-    padding: 5px 8px;
-  }
-  
 }
