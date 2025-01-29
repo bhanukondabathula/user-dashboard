@@ -7,6 +7,7 @@
 table {
   width: 100%; 
   border-collapse: collapse;
+  table-layout: auto; 
 }
 
 th,
@@ -72,23 +73,44 @@ button {
 }
 
 
-@media (min-width: 786px) {
+@media (max-width: 768px) {
   .user-list {
-    width: 100%;
-    display: block;
+    font-size: 8px; 
+    padding: 10px;
   }
 
   table {
-    width: 100%;
-    font-size: 16px; 
+    font-size: 12px;
+    overflow-x: scroll; 
   }
 
   th, td {
-    padding: 15px;
-    font-size: 16px; 
+    padding: 8px;
+    font-size: 12px; 
   }
-  .button{
-    padding: 10px 20px;
-    font-size: 16px;
+
+  .edit-button,
+  .delete-button {
+    font-size: 10px;
+    padding: 6px 10px;
   }
+
+}
+
+@media (max-width: 576px) {
+  .user-list {
+    font-size: 7px; 
+  }
+
+  th, td {
+    padding: 8px;
+    font-size: 10px; 
+  }
+
+  .edit-button,
+  .delete-button {
+    font-size: 10px;
+    padding: 5px 8px;
+  }
+  
 }
